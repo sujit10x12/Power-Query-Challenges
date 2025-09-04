@@ -15,10 +15,33 @@ Welcome! This repository contains my hands-on work from the Power Query Fundamen
  ## 1. Basic Transformations
 
 **Challenge:**
- - Create another CSV query to fetch data for 1Z
- - Tranform it:
+ - Create another CSV query to fetch data for 1Z & Transform the same
+   
    <img width="1280" height="720" alt="1z - Basic Transformation" src="https://github.com/user-attachments/assets/d68502f9-03e3-4bf4-8a58-8ebe1a1ee7c5" />
+   
 
+**Steps Overview:**
+
+### Part 1 – Data Cleaning & Reshaping
+- Removed column number references and header rows.  
+- Promoted first row to headers.  
+- Deleted unnecessary columns (`Ref1`, `Ref2`).  
+- Replaced blanks with nulls and filled down missing values.  
+- Unpivoted date columns, then pivoted the **Metric** column (no aggregation).  
+- Renamed the **Attribute** column for clarity.  
+
+### Part 2 – Date Handling & Filtering
+- Created a backup of the Date column (**DateBackup**).  
+- Parsed the Date column while keeping errors, then deleted the original Date column.  
+- Filtered out years **2017 and 2018** from DateBackup.  
+- Filtered **Store** column to keep only values **1 and 2**.  
+- Renamed **DateBackup** to **Quarter**.  
+- Adjusted data types appropriately.  
+
+---
+
+## Outcome
+The final dataset is cleaned, reshaped, and ready for analysis, with clear quarters, relevant stores, and structured metrics.
 
 ---
 
