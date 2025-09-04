@@ -101,7 +101,7 @@ The final dataset provides a **monthly view of total sales and margins**, aggreg
 
 ## 4. Categorizing Sales Data – Exercise 4Z
 
-**Challenge:**  
+## Challenge
 - Create a new CSV query to fetch data for **File 4Z**.
 - Transform raw sales data by mapping category codes to readable labels and cleaning the dataset.
 
@@ -119,3 +119,87 @@ The final dataset provides a **monthly view of total sales and margins**, aggreg
 A **clean, categorized sales dataset** with proper labels, valid dates, and numeric sales values — ready for reporting or analysis.
 
 ---
+
+## Assessment A – Sales Aggregation
+
+## Challenge
+Transform the raw CSV dataset with hundreds of columns into a clean, aggregated table, focusing on Store 2.
+
+<img width="1280" height="720" alt="Assessment A" src="https://github.com/user-attachments/assets/231e3ee0-8d99-49e9-8fa3-d766e88e14b1" />
+
+
+### Steps Overview
+- Removed extra top rows and unnecessary columns.  
+- Promoted headers to column names.  
+- Unpivoted the dataset (from wide to long format).  
+- Filled down missing `Store` values and converted blanks to null.  
+- Converted `Value` to numeric type.  
+- Grouped data by **Store** and **Attribute**, calculating total **Sales**.  
+- Filtered to keep only **Store = 2**.  
+
+### Outcome
+The final dataset contains **summed sales by Store 2** across all attributes, reshaped into a clean long format for analysis.
+
+---
+
+## Assessment B 
+
+## Challenge  
+Prepare and standardize **GL Accounts** and **GL Transactions** data to build a clean chart of accounts, enrich account details, and summarize transactions for reporting.  
+
+
+## Steps Overview  
+
+- **GL Accounts**  
+  - Loaded *Accounts* sheet.  
+  - Created unified **Name** column (Balance Sheet / Income Statement).  
+  - Removed unnecessary columns.  
+
+- **Accounts**  
+  - Rebuilt *Accounts* table with a clean **GL Account Name**.  
+  - Merged with **GLAccounts** on `GL CODE`.  
+  - Expanded account names, sorted, and set correct data types.  
+
+- **GL Transactions**  
+  - Cleaned and promoted headers.  
+  - Grouped by `GL Account` and summed **Amount**.  
+  - Merged with **GLAccounts** to attach account names.
+
+
+## Outcome  
+- A **standardized chart of accounts** with consistent naming.  
+- A **refined Accounts table** enriched with GL account names.  
+- A **summarized Transactions table** showing account totals with names.  
+- Final dataset is structured and ready for **financial analysis and reporting**.  
+
+---
+
+## Assessment C
+
+## Challenge  
+Combine multiple files from a folder, clean and transform the data, and produce a summarized view of values grouped by **Category (Cat)**.  
+
+<img width="1280" height="720" alt="Assessment C" src="https://github.com/user-attachments/assets/23fa82aa-16d3-4709-8187-e4f5371d7e03" />
+
+## Steps Overview  
+
+- **Load Data**  
+  - Connected to the folder containing all source files.  
+  - Filtered out hidden/system files.  
+  - Invoked a custom transform function to process each file.  
+
+- **Data Cleaning**  
+  - Expanded the transformed data into one consolidated table.  
+  - Removed unnecessary columns (`Source.Name`, `Metric`, `Store`, `Attribute`).  
+  - Changed **Value** column to numeric.  
+
+- **Data Transformation**  
+  - Grouped rows by **Cat**.  
+  - Summed the **Value** column to calculate totals per category.  
+
+---
+
+## Outcome  
+- A **consolidated dataset** from all files in the folder.  
+- A **category-level summary** showing total values for each **Cat**.  
+- Clean, structured data ready for reporting and analysis.  
