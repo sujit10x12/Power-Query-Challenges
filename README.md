@@ -20,7 +20,7 @@ Welcome! This repository contains my hands-on work from the Power Query Fundamen
    <img width="1280" height="720" alt="1z - Basic Transformation" src="https://github.com/user-attachments/assets/d68502f9-03e3-4bf4-8a58-8ebe1a1ee7c5" />
    
 
-**Steps Overview:**
+## Steps Overview
 
 ### Part 1 – Data Cleaning & Reshaping
 - Removed column number references and header rows.  
@@ -37,8 +37,6 @@ Welcome! This repository contains my hands-on work from the Power Query Fundamen
 - Filtered **Store** column to keep only values **1 and 2**.  
 - Renamed **DateBackup** to **Quarter**.  
 - Adjusted data types appropriately.  
-
----
 
 ## Outcome
 The final dataset is cleaned, reshaped, and ready for analysis, with clear quarters, relevant stores, and structured metrics.
