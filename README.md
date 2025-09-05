@@ -14,7 +14,7 @@ Welcome! This repository contains my hands-on work from the Power Query Fundamen
 
  ## 1. Basic Transformations
 
-## Challenge
+⚔️ Challenge
  - Create a new CSV query to fetch data for **File 1Z**.
  - Clean and reshape the raw CSV data into a structured format for analysis.
    
@@ -38,7 +38,7 @@ Welcome! This repository contains my hands-on work from the Power Query Fundamen
 - **Renamed Column** – Renamed `Date - Copy` → `Quarter`.  
 - **Changed Types** – Converted fields into correct data types (numbers, integers, dates).   
 
-### Outcome
+📌 Outcome
 The final dataset provides:  
 - **Quarterly Sales & Margin** data  
 - Clean categories and store references  
@@ -48,7 +48,7 @@ The final dataset provides:
 
 ## 2. Extracting Data
 
-## Challenge
+⚔️ Challenge
  - Create a new CSV query to fetch data for **File 2Z**.
  - Transform the *Duty Free Margins Dataset B* into a clean, structured dataset for analysis.
 
@@ -71,7 +71,7 @@ The final dataset provides:
 - **Renamed Columns** – `Attribute` → `Quarter`, `Value` → `Margin`.  
 - **Changed Type** – Converted `Margin` column to number.  
 
-### Outcome
+📌 Outcome
 The final dataset contains:  
 - **Division, Department, Supplier, Brand, Quarter, Margin**  
 - Cleaned, standardized, and reshaped values  
@@ -81,7 +81,7 @@ The final dataset contains:
 
 ## 3. Consolidating Data
 
-## Challenge
+⚔️ Challenge
  - Create a new CSV query to fetch data for **File 3Z**.
  - Aggregate daily sales and margin data from multiple managers into a clean monthly summary.
 
@@ -94,14 +94,14 @@ The final dataset contains:
 - Transformed **Transaction Date** to the first day of the month.  
 - Grouped data by month to compute **Total Sales** and **Total Margin**.  
 
-### Outcome
+📌 Outcome
 The final dataset provides a **monthly view of total sales and margins**, aggregated across all managers.
 
 ---
 
 ## 4. Categorizing Sales Data – Exercise 4Z
 
-## Challenge
+⚔️ Challenge
 - Create a new CSV query to fetch data for **File 4Z**.
 - Transform raw sales data by mapping category codes to readable labels and cleaning the dataset.
 
@@ -115,14 +115,14 @@ The final dataset provides a **monthly view of total sales and margins**, aggreg
 - Converted `Date` column to **date format** (UK locale).  
 - Adjusted data types for `Sales` (number) and `Category` (text).  
 
-### Outcome
+📌 Outcome
 A **clean, categorized sales dataset** with proper labels, valid dates, and numeric sales values — ready for reporting or analysis.
 
 ---
 
 ## Assessment A – Sales Aggregation
 
-## Challenge
+⚔️ Challenge
 Transform the raw CSV dataset with hundreds of columns into a clean, aggregated table, focusing on Store 2.
 
 <img width="1280" height="720" alt="Assessment A" src="https://github.com/user-attachments/assets/231e3ee0-8d99-49e9-8fa3-d766e88e14b1" />
@@ -144,39 +144,36 @@ The final dataset contains **summed sales by Store 2** across all attributes, re
 
 ## Assessment B 
 
-## Challenge  
+⚔️ Challenge  
 Prepare and standardize **GL Accounts** and **GL Transactions** data to build a clean chart of accounts, enrich account details, and summarize transactions for reporting.  
 
+<img width="1280" height="720" alt="Assessment B" src="https://github.com/user-attachments/assets/1713d438-7dc8-4014-993d-4e14ea04e3fd" />
 
 ## Steps Overview  
 
-- **GL Accounts**  
-  - Loaded *Accounts* sheet.  
-  - Created unified **Name** column (Balance Sheet / Income Statement).  
-  - Removed unnecessary columns.  
+### 🔹 Part 1 – Clean & Prepare GL Accounts  
+- Load the **GLAccounts** table from the Excel workbook.  
+- Create a unified **GL Account Name** by combining *Balance Sheet Names* and *Income Statement Names*.  
+- Remove unnecessary columns such as `Category` and `Statement`.  
+- Convert `GL CODE` into the correct numeric data type.  
 
-- **Accounts**  
-  - Rebuilt *Accounts* table with a clean **GL Account Name**.  
-  - Merged with **GLAccounts** on `GL CODE`.  
-  - Expanded account names, sorted, and set correct data types.  
+### 🔹 Part 2 – Clean, Merge & Aggregate GL Transactions  
+- Load the **GL Transactions** sheet from the Excel workbook.  
+- Remove extra rows and promote the first row as headers.  
+- Drop unneeded columns such as `ID`, `Company`, `Date`, and `User`.  
+- Ensure `GL Account` is stored as a number.  
+- Merge transactions with the **GL Accounts table** (from Part 1) to attach account names.  
+- Group data by **GL Account** and **GL Account Name**, summing up the transaction amounts.  
 
-- **GL Transactions**  
-  - Cleaned and promoted headers.  
-  - Grouped by `GL Account` and summed **Amount**.  
-  - Merged with **GLAccounts** to attach account names.
-
-
-## Outcome  
-- A **standardized chart of accounts** with consistent naming.  
-- A **refined Accounts table** enriched with GL account names.  
-- A **summarized Transactions table** showing account totals with names.  
-- Final dataset is structured and ready for **financial analysis and reporting**.  
+📌 Output 
+  - A clean and structured dataset where each GL Account is linked with its name and total amount, ready for reporting and analysis.  
 
 ---
 
+
 ## Assessment C
 
-## Challenge  
+⚔️ Challenge  
 Combine multiple files from a folder, clean and transform the data, and produce a summarized view of values grouped by **Category (Cat)**.  
 
 <img width="1280" height="720" alt="Assessment C" src="https://github.com/user-attachments/assets/23fa82aa-16d3-4709-8187-e4f5371d7e03" />
@@ -197,9 +194,7 @@ Combine multiple files from a folder, clean and transform the data, and produce 
   - Grouped rows by **Cat**.  
   - Summed the **Value** column to calculate totals per category.  
 
----
-
-## Outcome  
-- A **consolidated dataset** from all files in the folder.  
-- A **category-level summary** showing total values for each **Cat**.  
-- Clean, structured data ready for reporting and analysis.  
+📌 Outcome  
+ - A **consolidated dataset** from all files in the folder.  
+ - A **category-level summary** showing total values for each **Cat**.  
+ - Clean, structured data ready for reporting and analysis.  
