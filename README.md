@@ -33,7 +33,7 @@ In addition, it also includes other exercise datasets that were part of the prac
  - Create a new CSV query to fetch data for **File 1Z**.
  - Clean and reshape the raw CSV data into a structured format for analysis.
    
-<img width="1280" height="720" alt="1z - Basic Transformation" src="https://github.com/user-attachments/assets/d68502f9-03e3-4bf4-8a58-8ebe1a1ee7c5" />
+<img width="1280" height="720" alt="1z - Basic Transformation" src="/images/1z - Basic Transformation.png" />
    
 
 ### Steps Overview
@@ -67,7 +67,7 @@ The final dataset provides:
  - Create a new CSV query to fetch data for **File 2Z**.
  - Transform the *Duty Free Margins Dataset B* into a clean, structured dataset for analysis.
 
-<img width="1280" height="720" alt="2z - Extracting Information" src="https://github.com/user-attachments/assets/14b5f93c-0bab-4a20-b6cb-fc171825104c" />
+<img width="1280" height="720" alt="2z - Extracting Information" src="/images/2z - Extracting Information.png" />
    
 🔢 Steps Overview
  - **Removed Top Rows** – Skipped first 4 rows containing non-data.  
@@ -99,7 +99,7 @@ The final dataset provides:
  - Create a new CSV query to fetch data for **File 3Z**.
  - Aggregate daily sales and margin data from multiple managers into a clean monthly summary.
 
-<img width="1280" height="720" alt="3z Consolidating Data" src="https://github.com/user-attachments/assets/f2cae6c7-68e6-415c-8972-19daab60ceb2" />
+<img width="1280" height="720" alt="3z Consolidating Data" src="/images/3z Consolidating Data.png" />
 
 🔢 Steps Overview
  - Added **Total Sales** by summing all manager sales.  
@@ -119,7 +119,7 @@ The final dataset provides:
 - Create a new CSV query to fetch data for **File 4Z**.
 - Transform raw sales data by mapping category codes to readable labels and cleaning the dataset.
 
-<img width="1280" height="720" alt="4z - Dealing with Errors" src="https://github.com/user-attachments/assets/dc1e4b56-c30e-4075-ac97-626411e1a17a" />
+<img width="1280" height="720" alt="4z - Dealing with Errors" src="/images/4z - Dealing with Errors.png" />
 
 🔢 Steps Overview
  - Promoted headers for proper column names.  
@@ -139,7 +139,7 @@ The final dataset provides:
 ⚔️ Challenge
 Transform the raw CSV dataset with hundreds of columns into a clean, aggregated table, focusing on Store 2.
 
-<img width="1280" height="720" alt="Assessment A" src="https://github.com/user-attachments/assets/231e3ee0-8d99-49e9-8fa3-d766e88e14b1" />
+<img width="1280" height="720" alt="Assessment A" src="/images/Assessment A.png" />
 
 
 🔢 Steps Overview
@@ -161,7 +161,7 @@ Transform the raw CSV dataset with hundreds of columns into a clean, aggregated 
 ⚔️ Challenge  
 Prepare and standardize **GL Accounts** and **GL Transactions** data to build a clean chart of accounts, enrich account details, and summarize transactions for reporting.  
 
-<img width="1280" height="720" alt="Assessment B" src="https://github.com/user-attachments/assets/1713d438-7dc8-4014-993d-4e14ea04e3fd" />
+<img width="1280" height="720" alt="Assessment B" src="/images/Assessment B.png" />
 
 🔢 Steps Overview  
 
@@ -190,7 +190,7 @@ Prepare and standardize **GL Accounts** and **GL Transactions** data to build a 
 ⚔️ Challenge  
 Combine multiple files from a folder, clean and transform the data, and produce a summarized view of values grouped by **Category (Cat)**.  
 
-<img width="1280" height="720" alt="Assessment C" src="https://github.com/user-attachments/assets/23fa82aa-16d3-4709-8187-e4f5371d7e03" />
+<img width="1280" height="720" alt="Assessment C" src="/images/Assessment C.png" />
 
 🔢 Steps Overview  
 
@@ -212,3 +212,13 @@ Combine multiple files from a folder, clean and transform the data, and produce 
   - A **consolidated dataset** from all files in the folder.  
   - A **category-level summary** showing total values for each **Cat**.  
   - Clean, structured data ready for reporting and analysis.  
+
+---
+## 📜 Course Info
+
+- **Course**: Data-Analysis-in-Excel 
+- **Provider**: Corporate Finance Institute (CFI)
+  
+ [**My Certificate Credential URL**](https://www.coursera.org/account/accomplishments/specialization/ILAJLO8GFP1J)
+
+![x](/images/certificate.jpg)
