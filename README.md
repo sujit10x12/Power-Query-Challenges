@@ -1,8 +1,20 @@
 # ⚙️ Power Query Fundamentals – CFI Course
 
-<img width="1584" height="396" alt="banner" src="https://github.com/user-attachments/assets/a427f425-fb98-4ec6-9919-7db65bade323" />
+<img width="1584" height="396" alt="banner" src="images/banner.png" />
 
 Welcome! This repository contains my hands-on work from the Power Query Fundamentals course offered by Corporate Finance Institute (CFI). Covers core data preparation techniques including data transformation, data extraction, data consolidation, and error handling using Power Query in Excel.
+
+---
+
+## 🛠 Tools Used
+  - Microsoft Excel (Power Query Editor)
+
+---
+
+## 📂 Data Folder
+
+<a href="/dataset">This</a> folder contains all the datasets I used to complete the challenges.  
+In addition, it also includes other exercise datasets that were part of the practice and learning process.
 
 ---
 
