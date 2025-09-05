@@ -13,9 +13,10 @@ Welcome! This repository contains my hands-on work from the Power Query Fundamen
 
 ## 📂 Data Folder
 
-<a href="/dataset">This</a> folder contains all the datasets I used to complete the challenges.  
-In addition, it also includes other exercise datasets that were part of the practice and learning process.
+<a href="/dataset">📂 This folder</a> contains all the datasets I used to complete the challenges.  
+It also includes other exercise datasets that were part of the practice and learning process.  
 
+📑 The full Excel workbook containing all solutions is available <a href="/PowerQuery_Complete.xlsx">here</a>.
 ---
 
 ## 🧠 Challenges
