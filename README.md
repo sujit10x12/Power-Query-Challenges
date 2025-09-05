@@ -217,7 +217,7 @@ Combine multiple files from a folder, clean and transform the data, and produce 
 ---
 ## 📜 Course Info
 
-- **Course**: Data-Analysis-in-Excel 
+- **Course**: Power Query Fundamentals 
 - **Provider**: Corporate Finance Institute (CFI)
   
  [**My Certificate Credential URL**](https://www.coursera.org/account/accomplishments/specialization/ILAJLO8GFP1J)
