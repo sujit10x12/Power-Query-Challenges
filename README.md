@@ -54,22 +54,22 @@ The final dataset provides:
 
 <img width="1280" height="720" alt="2z - Extracting Information" src="https://github.com/user-attachments/assets/14b5f93c-0bab-4a20-b6cb-fc171825104c" />
    
-### Steps Overview
-- **Removed Top Rows** – Skipped first 4 rows containing non-data.  
-- **Split Column** – Broke `Column4` into multiple columns using `" | "` as delimiter.  
-- **Promoted Headers** – Used first row as headers.  
-- **Filtered Rows** – Removed nulls in `Product Details`.  
-- **Split Product Details** – Divided into `Division` and `Department` by `-`.  
-- **Extracted Last Characters** – Kept only the last character of `Division`.  
-- **Added Prefix** – Added `"Division "` before the extracted character.  
-- **Renamed Columns** – Assigned proper names (`Division`, `Department`).  
-- **Uppercased Text** – Standardized `Department` values to uppercase.  
-- **Split Brands** – Split `Brands` column by `;` into multiple rows.  
-- **Trimmed Text** – Removed extra spaces from `Brands`.  
-- **Filtered Rows** – Removed empty brand values.  
-- **Unpivoted Other Columns** – Reshaped quarterly columns into row format.  
-- **Renamed Columns** – `Attribute` → `Quarter`, `Value` → `Margin`.  
-- **Changed Type** – Converted `Margin` column to number.  
+🔢 Steps Overview
+ - **Removed Top Rows** – Skipped first 4 rows containing non-data.  
+ - **Split Column** – Broke `Column4` into multiple columns using `" | "` as delimiter.  
+ - **Promoted Headers** – Used first row as headers.  
+ - **Filtered Rows** – Removed nulls in `Product Details`.  
+ - **Split Product Details** – Divided into `Division` and `Department` by `-`.  
+ - **Extracted Last Characters** – Kept only the last character of `Division`.  
+ - **Added Prefix** – Added `"Division "` before the extracted character.  
+ - **Renamed Columns** – Assigned proper names (`Division`, `Department`).  
+ - **Uppercased Text** – Standardized `Department` values to uppercase.  
+ - **Split Brands** – Split `Brands` column by `;` into multiple rows.  
+ - **Trimmed Text** – Removed extra spaces from `Brands`.  
+ - **Filtered Rows** – Removed empty brand values.  
+ - **Unpivoted Other Columns** – Reshaped quarterly columns into row format.  
+ - **Renamed Columns** – `Attribute` → `Quarter`, `Value` → `Margin`.  
+ - **Changed Type** – Converted `Margin` column to number.  
 
 📌 Outcome
 The final dataset contains:  
@@ -87,15 +87,15 @@ The final dataset contains:
 
 <img width="1280" height="720" alt="3z Consolidating Data" src="https://github.com/user-attachments/assets/f2cae6c7-68e6-415c-8972-19daab60ceb2" />
 
-### Steps Overview
-- Added **Total Sales** by summing all manager sales.  
-- Calculated individual manager margins (`Sales × Margin`) and total margin.  
-- Cleaned up by removing intermediate calculation columns.  
-- Transformed **Transaction Date** to the first day of the month.  
-- Grouped data by month to compute **Total Sales** and **Total Margin**.  
+🔢 Steps Overview
+ - Added **Total Sales** by summing all manager sales.  
+ - Calculated individual manager margins (`Sales × Margin`) and total margin.  
+ - Cleaned up by removing intermediate calculation columns.  
+ - Transformed **Transaction Date** to the first day of the month.  
+ - Grouped data by month to compute **Total Sales** and **Total Margin**.  
 
 📌 Outcome
-The final dataset provides a **monthly view of total sales and margins**, aggregated across all managers.
+ The final dataset provides a **monthly view of total sales and margins**, aggregated across all managers.
 
 ---
 
@@ -107,13 +107,13 @@ The final dataset provides a **monthly view of total sales and margins**, aggreg
 
 <img width="1280" height="720" alt="4z - Dealing with Errors" src="https://github.com/user-attachments/assets/dc1e4b56-c30e-4075-ac97-626411e1a17a" />
 
-### Steps Overview
-- Promoted headers for proper column names.  
-- Added a conditional column to map category codes (`ALC`, `TOB`, `FD`, `LXY`, `PER`) into meaningful labels (Alcohol, Tobacco, Food, Luxury, Perfume, Other).  
-- Filtered out rows with null `Sales` values.  
-- Removed the original `Cat` column.  
-- Converted `Date` column to **date format** (UK locale).  
-- Adjusted data types for `Sales` (number) and `Category` (text).  
+🔢 Steps Overview
+ - Promoted headers for proper column names.  
+ - Added a conditional column to map category codes (`ALC`, `TOB`, `FD`, `LXY`, `PER`) into meaningful labels (Alcohol, Tobacco, Food, Luxury, Perfume, Other).  
+ - Filtered out rows with null `Sales` values.  
+ - Removed the original `Cat` column.  
+ - Converted `Date` column to **date format** (UK locale).  
+ - Adjusted data types for `Sales` (number) and `Category` (text).  
 
 📌 Outcome
 A **clean, categorized sales dataset** with proper labels, valid dates, and numeric sales values — ready for reporting or analysis.
@@ -128,17 +128,17 @@ Transform the raw CSV dataset with hundreds of columns into a clean, aggregated 
 <img width="1280" height="720" alt="Assessment A" src="https://github.com/user-attachments/assets/231e3ee0-8d99-49e9-8fa3-d766e88e14b1" />
 
 
-### Steps Overview
-- Removed extra top rows and unnecessary columns.  
-- Promoted headers to column names.  
-- Unpivoted the dataset (from wide to long format).  
-- Filled down missing `Store` values and converted blanks to null.  
-- Converted `Value` to numeric type.  
-- Grouped data by **Store** and **Attribute**, calculating total **Sales**.  
-- Filtered to keep only **Store = 2**.  
+🔢 Steps Overview
+ - Removed extra top rows and unnecessary columns.  
+ - Promoted headers to column names.  
+ - Unpivoted the dataset (from wide to long format).  
+ - Filled down missing `Store` values and converted blanks to null.  
+ - Converted `Value` to numeric type.  
+ - Grouped data by **Store** and **Attribute**, calculating total **Sales**.  
+ - Filtered to keep only **Store = 2**.  
 
 ### Outcome
-The final dataset contains **summed sales by Store 2** across all attributes, reshaped into a clean long format for analysis.
+ The final dataset contains **summed sales by Store 2** across all attributes, reshaped into a clean long format for analysis.
 
 ---
 
@@ -149,7 +149,7 @@ Prepare and standardize **GL Accounts** and **GL Transactions** data to build a 
 
 <img width="1280" height="720" alt="Assessment B" src="https://github.com/user-attachments/assets/1713d438-7dc8-4014-993d-4e14ea04e3fd" />
 
-## Steps Overview  
+🔢 Steps Overview  
 
 ### 🔹 Part 1 – Clean & Prepare GL Accounts  
 - Load the **GLAccounts** table from the Excel workbook.  
@@ -178,7 +178,7 @@ Combine multiple files from a folder, clean and transform the data, and produce 
 
 <img width="1280" height="720" alt="Assessment C" src="https://github.com/user-attachments/assets/23fa82aa-16d3-4709-8187-e4f5371d7e03" />
 
-## Steps Overview  
+🔢 Steps Overview  
 
 - **Load Data**  
   - Connected to the folder containing all source files.  
