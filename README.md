@@ -1,4 +1,7 @@
 # ⚙️ Power Query Fundamentals – CFI Course
+
+<img width="1584" height="396" alt="banner" src="https://github.com/user-attachments/assets/a427f425-fb98-4ec6-9919-7db65bade323" />
+
 Welcome! This repository contains my hands-on work from the Power Query Fundamentals course offered by Corporate Finance Institute (CFI). Covers core data preparation techniques including data transformation, data extraction, data consolidation, and error handling using Power Query in Excel.
 
 ---
@@ -72,10 +75,9 @@ The final dataset provides:
  - **Changed Type** – Converted `Margin` column to number.  
 
 📌 Outcome
-The final dataset contains:  
-- **Division, Department, Supplier, Brand, Quarter, Margin**  
-- Cleaned, standardized, and reshaped values  
-- Ready for analysis of duty-free margins by division, department, and brand. 
+ - **Division, Department, Supplier, Brand, Quarter, Margin**  
+ - Cleaned, standardized, and reshaped values  
+ - Ready for analysis of duty-free margins by division, department, and brand. 
 
 ---
 
@@ -95,7 +97,7 @@ The final dataset contains:
  - Grouped data by month to compute **Total Sales** and **Total Margin**.  
 
 📌 Outcome
- The final dataset provides a **monthly view of total sales and margins**, aggregated across all managers.
+  - The final dataset provides a **monthly view of total sales and margins**, aggregated across all managers.
 
 ---
 
@@ -116,7 +118,7 @@ The final dataset contains:
  - Adjusted data types for `Sales` (number) and `Category` (text).  
 
 📌 Outcome
-A **clean, categorized sales dataset** with proper labels, valid dates, and numeric sales values — ready for reporting or analysis.
+ - A **clean, categorized sales dataset** with proper labels, valid dates, and numeric sales values — ready for reporting or analysis.
 
 ---
 
@@ -137,8 +139,8 @@ Transform the raw CSV dataset with hundreds of columns into a clean, aggregated 
  - Grouped data by **Store** and **Attribute**, calculating total **Sales**.  
  - Filtered to keep only **Store = 2**.  
 
-### Outcome
- The final dataset contains **summed sales by Store 2** across all attributes, reshaped into a clean long format for analysis.
+📌 Outcome
+  - The final dataset contains **summed sales by Store 2** across all attributes, reshaped into a clean long format for analysis.
 
 ---
 
@@ -195,6 +197,6 @@ Combine multiple files from a folder, clean and transform the data, and produce 
   - Summed the **Value** column to calculate totals per category.  
 
 📌 Outcome  
- - A **consolidated dataset** from all files in the folder.  
- - A **category-level summary** showing total values for each **Cat**.  
- - Clean, structured data ready for reporting and analysis.  
+  - A **consolidated dataset** from all files in the folder.  
+  - A **category-level summary** showing total values for each **Cat**.  
+  - Clean, structured data ready for reporting and analysis.  
