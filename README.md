@@ -1,225 +1,126 @@
-# ⚙️ Power Query Fundamentals – CFI Course
+# 🧋 Beverage Sales Exploratory Data Analysis (EDA)
 
 <img width="1584" height="396" alt="banner" src="images/banner.png" />
 
-Welcome! This repository contains my hands-on work from the Power Query Fundamentals course offered by Corporate Finance Institute (CFI). Covers core data preparation techniques including data transformation, data extraction, data consolidation, and error handling using Power Query in Excel.
+This project performs **Exploratory Data Analysis (EDA)** on beverage sales data to uncover **trends, category performance, regional patterns, pricing insights, and consumer behavior**. The goal is to extract **actionable business insights** that support data-driven decision-making.
 
 ---
 
-## 🛠 Tools Used
-  - Microsoft Excel (Power Query Editor)
+# 📑 Table of Contents  
+
+  - [❓ Business Questions](#-business-questions)  
+  - [⚙️ Tech Stack](#️-tech-stack)  
+  - [📁 Dataset & Resources](#-dataset--resources)
+  - [📂 Project Workflow](#-project-workflow)  
+  - [📊 Sample Visuals](#-sample-visuals)  
+  - [🔍 Key Insights](#-key-insights)  
+  - [💡 Recommendations](#-recommendations)  
+  - [🏁 Conclusion](#-conclusion)  
 
 ---
 
-## 📂 Data Folder
+## ❓ Business Questions
 
-<a href="/dataset">📂 This folder</a> contains all the datasets I used to complete the challenges.  
-It also includes other exercise datasets that were part of the practice and learning process.  
+This analysis aims to address the following key questions:
 
-📑 The full Excel workbook containing all solutions is available <a href="/PowerQuery_Complete.xlsx">here</a>.
----
+1. **Sales Performance** 📈  
+   What are the overall sales trends, and how have they evolved over time? Are there any significant fluctuations that need attention?
 
-## 🧠 Challenges
+2. **Product Categories** 🛍️  
+   Which products and categories contribute the most to sales? Which categories are underperforming?
 
-1. [Basic Transformations](#1-basic-transformations)
-2. [Extracting Data](#2-extracting-data)
-3. [Consolidating Data](#3-consolidating-data)
-4. [Dealing with Errors](#4-dealing-with-errors)
+3. **Geographic Insights** 🌍  
+   How does sales performance vary across regions? Are there growth opportunities or areas requiring stronger marketing?
 
----
+4. **Price Segment Insights** 💲  
+   Which price categories demonstrate the strongest customer preferences?
 
- ## 1. Basic Transformations
-
-⚔️ Challenge
- - Create a new CSV query to fetch data for **File 1Z**.
- - Clean and reshape the raw CSV data into a structured format for analysis.
-   
-<img width="1280" height="720" alt="1z - Basic Transformation" src="/images/1z - Basic Transformation.png" />
-   
-
-### Steps Overview
-- **Removed Top/Bottom Rows** – Skipped the first 8 and last 2 rows (extra notes/headers).  
-- **Promoted Headers** – Used the first row as column headers.  
-- **Removed Columns** – Dropped `Ref1` and `Ref2`.  
-- **Replaced Values** – Converted blanks in `Metric` to null.  
-- **Filled Down** – Filled down `Metric` values for missing rows.  
-- **Unpivoted Columns** – Converted date columns into row values.  
-- **Renamed Columns** – Renamed `Attribute` → `Date`.  
-- **Pivoted Columns** – Reshaped `Metric` column into separate fields (`Margin`, `Sales`).  
-- **Duplicated Date Column** – Created a backup (`Date - Copy`).  
-- **Parsed Date** – Converted `Date` into proper date format.  
-- **Kept Errors** – Retained only rows with parsing errors (e.g., non-standard values).  
-- **Removed Columns** – Dropped original `Date` column.  
-- **Filtered Rows** – Removed 2017 and 2018 from the backup date column.  
-- **Renamed Column** – Renamed `Date - Copy` → `Quarter`.  
-- **Changed Types** – Converted fields into correct data types (numbers, integers, dates).   
-
-📌 Outcome
-The final dataset provides:  
-- **Quarterly Sales & Margin** data  
-- Clean categories and store references  
-- Structured format ready for reporting and analysis 
+5. **Consumer Type** 👥  
+   How do different consumer segments (e.g., **B2B vs. B2C**) contribute to overall sales?
 
 ---
 
-## 2. Extracting Data
+## ⚙️ Tech Stack
 
-⚔️ Challenge
- - Create a new CSV query to fetch data for **File 2Z**.
- - Transform the *Duty Free Margins Dataset B* into a clean, structured dataset for analysis.
-
-<img width="1280" height="720" alt="2z - Extracting Information" src="/images/2z - Extracting Information.png" />
-   
-🔢 Steps Overview
- - **Removed Top Rows** – Skipped first 4 rows containing non-data.  
- - **Split Column** – Broke `Column4` into multiple columns using `" | "` as delimiter.  
- - **Promoted Headers** – Used first row as headers.  
- - **Filtered Rows** – Removed nulls in `Product Details`.  
- - **Split Product Details** – Divided into `Division` and `Department` by `-`.  
- - **Extracted Last Characters** – Kept only the last character of `Division`.  
- - **Added Prefix** – Added `"Division "` before the extracted character.  
- - **Renamed Columns** – Assigned proper names (`Division`, `Department`).  
- - **Uppercased Text** – Standardized `Department` values to uppercase.  
- - **Split Brands** – Split `Brands` column by `;` into multiple rows.  
- - **Trimmed Text** – Removed extra spaces from `Brands`.  
- - **Filtered Rows** – Removed empty brand values.  
- - **Unpivoted Other Columns** – Reshaped quarterly columns into row format.  
- - **Renamed Columns** – `Attribute` → `Quarter`, `Value` → `Margin`.  
- - **Changed Type** – Converted `Margin` column to number.  
-
-📌 Outcome
- - **Division, Department, Supplier, Brand, Quarter, Margin**  
- - Cleaned, standardized, and reshaped values  
- - Ready for analysis of duty-free margins by division, department, and brand. 
+- **Python** 🐍  
+- **Pandas, NumPy** → Data manipulation  
+- **Matplotlib, Seaborn** → Data visualization  
+- **Jupyter Notebook** → Interactive analysis  
+- **Scikit-learn (if used)** → Feature analysis/statistics  
 
 ---
 
-## 3. Consolidating Data
+## 📁 Dataset & Resources
 
-⚔️ Challenge
- - Create a new CSV query to fetch data for **File 3Z**.
- - Aggregate daily sales and margin data from multiple managers into a clean monthly summary.
+Looking to dive straight in? Here are the key resources: 
+- **Dataset**
+  - [Download dataset](https://www.kaggle.com/datasets/sebastianwillmann/beverage-sales)
 
-<img width="1280" height="720" alt="3z Consolidating Data" src="/images/3z Consolidating Data.png" />
+- **Jupyter Notebook (EDA)**
+  - Repository: <a href="/Notebook-BeverageSalesEDA.ipynb"></a>
 
-🔢 Steps Overview
- - Added **Total Sales** by summing all manager sales.  
- - Calculated individual manager margins (`Sales × Margin`) and total margin.  
- - Cleaned up by removing intermediate calculation columns.  
- - Transformed **Transaction Date** to the first day of the month.  
- - Grouped data by month to compute **Total Sales** and **Total Margin**.  
-
-📌 Outcome
-  - The final dataset provides a **monthly view of total sales and margins**, aggregated across all managers.
+- **Full Report (PDF / HTML)**
+  - [Read full report](/Report-BeverageSalesEDA.docx)
 
 ---
 
-## 4. Categorizing Sales Data – Exercise 4Z
-
-⚔️ Challenge
-- Create a new CSV query to fetch data for **File 4Z**.
-- Transform raw sales data by mapping category codes to readable labels and cleaning the dataset.
-
-<img width="1280" height="720" alt="4z - Dealing with Errors" src="/images/4z - Dealing with Errors.png" />
-
-🔢 Steps Overview
- - Promoted headers for proper column names.  
- - Added a conditional column to map category codes (`ALC`, `TOB`, `FD`, `LXY`, `PER`) into meaningful labels (Alcohol, Tobacco, Food, Luxury, Perfume, Other).  
- - Filtered out rows with null `Sales` values.  
- - Removed the original `Cat` column.  
- - Converted `Date` column to **date format** (UK locale).  
- - Adjusted data types for `Sales` (number) and `Category` (text).  
-
-📌 Outcome
- - A **clean, categorized sales dataset** with proper labels, valid dates, and numeric sales values — ready for reporting or analysis.
+## 📂 Project Workflow
+1. **Data Cleaning** – Handle missing values, duplicates, formatting  
+2. **Exploratory Analysis** – Sales trends, category breakdown, pricing impact  
+3. **Visualizations** – Charts & graphs for insights  
+4. **Insights Report** – Business recommendations  
 
 ---
 
-## Assessment A – Sales Aggregation
+## 📊 Sample Visuals
 
-⚔️ Challenge
-Transform the raw CSV dataset with hundreds of columns into a clean, aggregated table, focusing on Store 2.
-
-<img width="1280" height="720" alt="Assessment A" src="/images/Assessment A.png" />
-
-
-🔢 Steps Overview
- - Removed extra top rows and unnecessary columns.  
- - Promoted headers to column names.  
- - Unpivoted the dataset (from wide to long format).  
- - Filled down missing `Store` values and converted blanks to null.  
- - Converted `Value` to numeric type.  
- - Grouped data by **Store** and **Attribute**, calculating total **Sales**.  
- - Filtered to keep only **Store = 2**.  
-
-📌 Outcome
-  - The final dataset contains **summed sales by Store 2** across all attributes, reshaped into a clean long format for analysis.
+| Sales Trend | Category Performance | Regional Insights |
+|-------------|----------------------|------------------|
+| ![trend](images/sales_trend.png) | ![category](images/category_sales.png) | ![region](images/region_sales.png) |
 
 ---
 
-## Assessment B 
+## 🔍 Key Insights
 
-⚔️ Challenge  
-Prepare and standardize **GL Accounts** and **GL Transactions** data to build a clean chart of accounts, enrich account details, and summarize transactions for reporting.  
-
-<img width="1280" height="720" alt="Assessment B" src="/images/Assessment B.png" />
-
-🔢 Steps Overview  
-
-### 🔹 Part 1 – Clean & Prepare GL Accounts  
-- Load the **GLAccounts** table from the Excel workbook.  
-- Create a unified **GL Account Name** by combining *Balance Sheet Names* and *Income Statement Names*.  
-- Remove unnecessary columns such as `Category` and `Statement`.  
-- Convert `GL CODE` into the correct numeric data type.  
-
-### 🔹 Part 2 – Clean, Merge & Aggregate GL Transactions  
-- Load the **GL Transactions** sheet from the Excel workbook.  
-- Remove extra rows and promote the first row as headers.  
-- Drop unneeded columns such as `ID`, `Company`, `Date`, and `User`.  
-- Ensure `GL Account` is stored as a number.  
-- Merge transactions with the **GL Accounts table** (from Part 1) to attach account names.  
-- Group data by **GL Account** and **GL Account Name**, summing up the transaction amounts.  
-
-📌 Output 
-  - A clean and structured dataset where each GL Account is linked with its name and total amount, ready for reporting and analysis.  
+- Revenue increased while order counts remained stable — higher value per order.  
+- Strong seasonality: dips in Feb–Mar and Dec, peak Jul–Oct (August highest).  
+- **Juices** dominate (Cranberry, Tomato, Mango top SKUs).  
+- **Water** and **Soft drinks** show steady growth; **Alcoholic drinks** stagnate.  
+- Market is price-sensitive but shifting to **mid-range (€2–4)** products.  
+- **B2C** drives growth; **B2B** flat or slightly declining.  
+- **North & East** = revenue anchors; **South** = highest growth potential.  
 
 ---
 
+## 💡 Recommendations
 
-## Assessment C
+To unlock further growth and optimize performance, the following actions are recommended:
 
-⚔️ Challenge  
-Combine multiple files from a folder, clean and transform the data, and produce a summarized view of values grouped by **Category (Cat)**.  
+### 📅 Leverage Seasonality  
+- Scale marketing efforts during **July–October** to maximize summer demand.  
+- Launch **loyalty programs** or **bundled discounts** in off-peak months to stabilize revenue.  
 
-<img width="1280" height="720" alt="Assessment C" src="/images/Assessment C.png" />
+### 🌍 Expand in Growth Regions  
+- Invest in **distribution and marketing campaigns** in the **South region** to capture growth.  
+- Strengthen **North/East positioning** to maintain market leadership.  
 
-🔢 Steps Overview  
+### 🥤 Product Strategy  
+- Double down on **Juices** and top-performing brands (Cranberry, Monster, Vio Wasser).  
+- Reassess **Alcoholic Beverages** — either innovate with new SKUs or reposition the category.  
 
-- **Load Data**  
-  - Connected to the folder containing all source files.  
-  - Filtered out hidden/system files.  
-  - Invoked a custom transform function to process each file.  
-
-- **Data Cleaning**  
-  - Expanded the transformed data into one consolidated table.  
-  - Removed unnecessary columns (`Source.Name`, `Metric`, `Store`, `Attribute`).  
-  - Changed **Value** column to numeric.  
-
-- **Data Transformation**  
-  - Grouped rows by **Cat**.  
-  - Summed the **Value** column to calculate totals per category.  
-
-📌 Outcome  
-  - A **consolidated dataset** from all files in the folder.  
-  - A **category-level summary** showing total values for each **Cat**.  
-  - Clean, structured data ready for reporting and analysis.  
+### 💶 Pricing & Shifts  
+- Focus on **€2–4 mid-range products** as the primary growth engine.  
+- Maintain selective presence in the **€4+ premium segment** as a brand-building lever.  
 
 ---
-## 📜 Course Info
 
-- **Course**: Power Query Fundamentals 
-- **Provider**: Corporate Finance Institute (CFI)
-  
- [**My Certificate Credential URL**](https://www.coursera.org/account/accomplishments/specialization/ILAJLO8GFP1J)
+## 🏁 Conclusion
+   ✔️ Seasonal peaks observed in certain beverage categories  
+   ✔️ Premium price segment shows consistent growth 📊  
+   ✔️ Specific regions drive majority of revenue 🌍  
+   ✔️ B2B customers contribute to bulk sales, while B2C drives diversity 👥  
+   ✔️ Underperforming categories identified for optimization  
 
-![x](/images/certificate.jpg)
+(Full interpretations, visualizations, and recommendations are in the <a href="/Notebook-BeverageSalesEDA.ipynb">Notebook</a> notebooks.)
+
+---
